@@ -1,0 +1,149 @@
+html {
+    font-family: Tahoma, sans-serif;
+    font-size: 16px;
+
+}
+
+/* Navigation Bar */
+
+.nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    padding: .8rem;
+}
+
+.nav__logo img{
+    display: flex;
+    object-fit: cover;
+    width: 250px;
+}
+
+.nav__leftnav, .nav__rightnav {
+    display: flex;
+    gap: 5rem;
+    
+
+}
+
+.nav__item {
+    color: rgb(0, 0, 0);
+    font-size: 1.5rem;
+    font-weight: 600;
+    transition: color 0.3s;
+    list-style: none;
+}
+
+/* Hero Section */
+
+.hero {
+    background-image: url(media/VietnamFarm.webp);
+    object-fit: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    height: 100vh;
+}
+.hero__content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 2rem;
+    height: 100vh;
+    color: white;
+    width: 100%;
+}
+.hero-text {
+    font-size: 4rem;
+    color: hsla(39, 78%, 25%, 0.9);
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    gap: 2rem;
+
+}
+
+.hero__image img{
+    position: relative;
+    object-fit: cover;
+    width: 450px;
+
+}
+
+/* Subscribtion Plan Section */
+
+.subscribtion {
+    background-image: url(media/Storage.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+
+}
+
+.subscribtion__content {
+    display: flex;
+    flex-direction: row;
+    padding: 3rem;
+    justify-content: center;
+    gap: 2rem;
+    width: 100%;
+    height: 900px;
+
+}
+.price-plan-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 450px;
+    padding: 2rem;
+    background: linear-gradient(180deg, rgba(114,78,44,0.6), rgba(86,53,23,0.8), rgba(39,19,0,0.9));
+    border-radius: 10px;
+}
+h3 {
+    color: rgb(255, 255, 255);
+}
+
+.price-plan-title {
+    font-size: 2rem;
+    color: rgb(255, 255, 255);
+    margin-bottom: 1rem;
+
+}
+.price-plan-price {
+    line-height: 3rem;
+    font-size: 2rem;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    text-align: center;
+}
+
+.price-plan-button {
+    padding: 1rem ;
+    margin: 2rem;
+    font-size: 1.5rem;
+    color: rgb(255, 255, 255);
+    background-color: #6f4827;
+    border-radius: 10px;
+    cursor: pointer;
+    width:400px;
+
+}
+
+.price-plan-description {
+    font-size: 1.3rem;
+    color: rgb(255, 255, 255);
+    margin-bottom: 2rem;
+}
+.price-plan-features {
+    line-height: 2.3rem;
+    font-size: 1.3rem;
+    color: rgb(255, 255, 255);
+    align-self: flex-start;
+    
+}
