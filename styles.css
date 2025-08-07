@@ -1,25 +1,44 @@
+:root {
+    --primary-color: #1d1d1d;
+    /* Dark Gray */
+    --secondary-color: #000000;
+    /* Black */
+    --accent-color: #503417;
+    /* Coffee*/
+    --text-color: white;
+    /* White */
+    --primary-font: Roboto;
+    /* Primary font */
+}
+
 html {
-    font-family: Tahoma, sans-serif;
+    font-family: var(--primary-font);
     font-size: 16px;
+
 
 }
 
 /* Navigation Bar */
 
-a, a:visited {
+a,
+a:visited {
     color: black;
     text-decoration: none;
-    
+
 }
+
 a:hover {
-    font-size: 1.7rem;
-    transition: font-size 0.4s;
+    font-size: 1.8rem;
+    transition: font-size 0.3s;
+    cursor: pointer;
 }
+
 a img:hover {
     transform: scale(1.1);
     transition: transform 0.4s;
 
 }
+
 
 .nav {
     position: absolute;
@@ -30,25 +49,26 @@ a img:hover {
     align-items: center;
     width: 100%;
     padding: 1rem 1rem;
+
 }
 
-.nav__logo img{
-    display: flex;
+.nav__logo img {
+    display: block;
     object-fit: cover;
-    max-width: 250px;
+    max-width: 300px;
 }
 
-.nav__leftnav, .nav__rightnav {
+.nav__leftnav,
+.nav__rightnav {
     display: flex;
-    gap: 5rem;
+    gap: 8rem;
     padding: 0;
 }
 
 .nav__item {
-    color: rgb(0, 0, 0);
-    font-size: 1.5rem;
-    font-weight: 600;
-    transition: color 0.3s;
+    color: var(--secondary-color);
+    font-size: 1.7rem;
+    font-weight: 700;
     list-style: none;
 }
 
@@ -59,58 +79,87 @@ a img:hover {
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-position: center;
+    background-position:center;
     width: 100%;
 }
+
 .hero__content {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
-    padding: 2rem;
     height: 100vh;
-    color: white;
     width: 100%;
-    gap: 8rem;
 }
+
 .hero__text {
-    font-size: 4rem;
-    color: hsla(0, 0%, 0%, 0.9);
+    font-size: 3rem;
+    color: var(--secondary-color);
     display: flex;
+    text-shadow: var(--accent-color) 3px 4px 6px;
     flex-direction: column;
-    align-self: center;
-    gap: 2rem;
+    gap: 3rem;
 
 }
+.hero__text p {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--secondary-color);
+}
 
-.hero__image img{
+.hero__image img {
     margin-top: 4rem;
-    
-    position: relative;
     object-fit: cover;
-    width: 450px;
+    width: 350px;
 
 }
+
 .hero__button {
 
     display: inline-block;
-  padding: 1rem 2rem;
-  background-color: #1a1a1aef;
-  color: #f5f5f5; /* Soft white */
-  font-family: 'Inter';
-  font-size: 1.2rem;
-  font-weight: 600;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  text-decoration: none;
-  border-radius: 0.5rem;
-  transition: all 0.3s ease;
+    padding: 1rem 2rem;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 0.8rem;
+    transition: all 0.3s ease;
 
 }
-.hero__button:hover {
-background-color: #000;
-  transform: translateY(-2px);
-  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+
+.hero__button a {
+    font-size: 1.2rem;
+    color: var(--text-color);
+    text-decoration: none;
+    text-shadow: var(--accent-color) 3px 4px 6px;
+}
+
+button:hover {
+    background-color: var(--accent-color);
+    transform: translateY(-4px);
+
+    cursor: pointer;
+}
+/* Products Section */
+.products__section {
+    background-image: url(media/bag.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.products__content {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    
 }
 
 /* Subscribtion Plan Section */
@@ -119,6 +168,7 @@ background-color: #000;
     background-image: url(media/Storage.jpg);
     background-size: cover;
     background-position: center;
+    height: 100vh;
 }
 
 .subscription__content {
@@ -131,57 +181,135 @@ background-color: #000;
 
 
 }
+
 .price-plan-card {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 450px;
     padding: 2rem;
-    background: linear-gradient(180deg, rgba(114,78,44,0.6), rgba(86,53,23,0.8), rgba(39,19,0,0.9));
-    border-radius: 10px;
+    background: linear-gradient(150deg, var(--primary-color) 85%, var(--accent-color));
+    box-shadow: var(--accent-color) 0px 10px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 2rem;
+    opacity: 0.97;
 }
+
 h3 {
-    color: rgb(255, 255, 255);
+    color: var(--text-color);
 }
 
 .price-plan-title {
     font-size: 2rem;
-    color: rgb(255, 255, 255);
+    color: var(--text-color);
     margin-bottom: 1rem;
 
 }
+
 .price-plan-price {
     line-height: 3rem;
     font-size: 2rem;
-    color: rgb(255, 255, 255);
+    color: var(--text-color);
     font-weight: bold;
     text-align: center;
 }
 
 .price-plan-button {
-    padding: 1rem ;
+    padding: 1rem;
     margin: 2rem;
     font-size: 1.5rem;
-    color: rgb(255, 255, 255);
-    background-color: #6f4827;
+    color: var(--text-color);
+    background-color: var(--primary-color);
     border-radius: 10px;
     cursor: pointer;
-    width:400px;
+    width: 400px;
 
 }
 
 .price-plan-description {
     font-size: 1.3rem;
-    color: rgb(255, 255, 255);
+    color: var(--text-color);
     margin-bottom: 2rem;
 }
+
 .price-plan-features {
     line-height: 2.3rem;
     font-size: 1.3rem;
-    color: rgb(255, 255, 255);
+    color: var(--text-color);
     align-self: flex-start;
-    
+
 }
+/* Test */
+
+.products {
+      display: flex;
+      gap: 2rem;
+      flex-flow: row wrap;
+      justify-content: center;
+        align-items: center;
+        padding: 2rem;
+    }
+
+    .product {
+      padding: 1rem;
+      width: 350px;
+      cursor: pointer;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .product:hover {
+      transform: scale(1.05);
+    }
+
+    .product img {
+      width: 100%;
+      height: auto;
+    }
+
+    .hidden {
+      display: none !important;
+    }
+
+    /* Side-by-side layout when a product is selected */
+    .active-container {
+        padding: 2rem;
+      text-align: center;
+      height: 100vh;
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+        justify-content: center;
+        
+    }
+
+    .active-product {
+      width: 400px;
+    }
+
+    .description {
+        display: flex;
+        flex-direction: column;
+        width: 400px;
+        height: 100%;
+        border-radius: 1rem;
+        color: var(--text-color);
+        opacity: .9;
+        background: linear-gradient(150deg, var(--primary-color) 85%, var(--secondary-color));
+        font-size: 1.5rem;
+      padding: 1rem;
+      flex: 1;
+    }
+
+    #backButton {
+      display: none;
+      margin-top: 2rem;
+      padding: 1rem 2rem;
+      background-color: var(--primary-color);
+
+    }
+
+/* Responsive Design */
+
 
 @media screen and (max-width: 768px) {
     .hero__content {
@@ -191,31 +319,42 @@ h3 {
         justify-content: center;
         gap: 2rem;
     }
+
     .hero__text {
         font-size: 1.5rem;
         text-align: center;
     }
+
     .hero__image img {
         width: 100%;
         max-width: 300px;
         align-items: center;
         justify-content: center;
+
+
+
+
+
     }
+
     .subscription__content {
         flex-direction: column;
         align-items: center;
     }
+
     .price-plan-card {
         width: 70%;
     }
-    .nav__leftnav, .nav__rightnav {
-    display: none;
-    gap: 0.8rem;
-    padding: 0;
 
-}
+    .nav__leftnav,
+    .nav__rightnav {
+        display: none;
+        gap: 0.8rem;
+        padding: 0;
 
-.nav {
+    }
+
+    .nav {
         flex-direction: column;
 
         padding: 0.5rem;
