@@ -37,8 +37,8 @@
       <div class="hero__content">
         <div class="hero__text">
           <h1>Hawas Coffee</h1>
-          <p>Experience the taste of origin —
-            <br/>fresh, premium coffee delivered to your door.</p>
+          <h2>Experience the taste of origin —
+            <br/>fresh, premium coffee delivered to your door.</h2>
           <button class="hero__button"><a class="button__link" href="#subscription">Taste the origin</a></button>
         </div>
         <div class="hero__image">
@@ -47,51 +47,29 @@
         </div>
       </div>
     </section>
-    <!--
-    <section class="products" id="products">
-      <div class="products__content">
-        <div class="products__card">
-          
-        </div>
-        <div class="products__card">
-          
-        </div>
-        <div class="products__card">
-          
-        </div>        
-        <div class="products__card">
-          
-        </div>
-      </div>
-    </section>
-    -->
     <section class="products__section" id="products">
       <div class="products" id="productGrid">
     <div class="product" data-id="1">
       <img src="media/HawasProduct.webp" alt="Product 1">
-      <h4>Viet Bang</h4>
     </div>
     <div class="product" data-id="2">
       <img src="media/HawasProduct.webp" alt="Product 2">
-      <h4>Kenya Bold</h4>
     </div>
     <div class="product" data-id="3">
       <img src="media/HawasProduct.webp" alt="Product 3">
-      <h4>Colombia Light</h4>
     </div>
     <div class="product" data-id="4">
       <img src="media/HawasProduct.webp" alt="Product 4">
-      <h4>Colombia Light</h4>
     </div>
   </div>
 
   <!-- Selected product and its description side-by-side -->
   <div class="active-container hidden" id="activeContainer">
-    <div id="activeProduct" class="active-product"></div>
+    <div id="goBack"><div id="activeProduct" class="active-product"></div></div>
     <div id="activeDescription" class="description"></div>
   </div>
 
-  <button id="backButton">Show All Products</button>
+  
 
     </section>
     <section class="subscription" id="subscription">
@@ -159,7 +137,7 @@
     const activeContainer = document.getElementById('activeContainer');
     const activeProduct = document.getElementById('activeProduct');
     const activeDescription = document.getElementById('activeDescription');
-    const backButton = document.getElementById('backButton');
+    const goBack = document.getElementById('goBack');
 
     const productData = {
       1: {
@@ -204,14 +182,14 @@
         `;
 
         activeContainer.classList.remove('hidden');
-        backButton.style.display = 'block';
+        goBack.style.display = 'block';
       });
     });
 
-    backButton.addEventListener('click', () => {
+    goBack.addEventListener('click', () => {
       activeContainer.classList.add('hidden');
       productGrid.classList.remove('hidden');
-      backButton.style.display = 'none';
+      goBack.style.display = 'none';
     });
   </script>
 </body>
