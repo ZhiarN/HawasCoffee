@@ -15,8 +15,7 @@ html {
     font-family: var(--primary-font);
     font-size: 16px;
     overflow-x: hidden;
-
-
+    scroll-behavior: smooth;
 }
 
 /* Navigation Bar */
@@ -163,7 +162,7 @@ button:hover {
 
     .product {
       padding: 1rem;
-      width: 350px;
+      width: 300px;
       cursor: pointer;
       text-align: center;
       transition: transform 0.3s ease-out;
@@ -230,7 +229,6 @@ button:hover {
     background-image: url(media/Storage.jpg);
     background-size: cover;
     background-position: center;
-    height: 100vh;
 }
 
 .subscription__content {
@@ -240,6 +238,7 @@ button:hover {
     justify-content: center;
     gap: 2rem;
     width: 100%;
+    height: 100vh;
 
 
 }
@@ -250,7 +249,7 @@ button:hover {
     align-items: center;
     width: 450px;
     padding: 2rem;
-    background: linear-gradient(150deg, var(--primary-color) 85%, var(--accent-color));
+    background: linear-gradient(180deg,rgba(29, 29, 29, 1) 0%, rgba(80, 52, 23, 1) 50%, rgba(0, 0, 0, 1) 100%);
     box-shadow: var(--accent-color) 0px 10px 20px rgba(0, 0, 0, 0.2);
     border-radius: 2rem;
     opacity: 0.97;

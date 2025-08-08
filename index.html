@@ -4,21 +4,21 @@
 <head>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
   <link rel="stylesheet" href="cssreset.css">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="fullpage.css">
+  <script type="text/javascript" src="fullpage.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description"
-    content="Hawas Coffee - Premium coffee subscription service offering high-quality, organic coffee beans delivered to your door.">
+  <meta name="description" content="Hawas Coffee - Premium coffee subscription service offering high-quality, organic coffee beans delivered to your door.">
   <meta name="keywords" content="coffee, subscription, organic, premium, delivery">
   <meta charset="UTF-8" />
   <title>Hawas</title>
 </head>
 
 <body>
+  <div id="fullpage">
   <header>
     <nav class="nav">
       <ul class="nav__leftnav">
@@ -33,7 +33,7 @@
     </nav>
   </header>
   <main>
-    <section class="hero">
+    <section class="hero section">
       <div class="hero__content">
         <div class="hero__text">
           <h1>Hawas Coffee</h1>
@@ -47,7 +47,7 @@
         </div>
       </div>
     </section>
-    <section class="products__section" id="products">
+    <section class="products__section section" id="products">
       <div class="products" id="productGrid">
     <div class="product" data-id="1">
       <img src="media/HawasProduct.webp" alt="Product 1">
@@ -72,7 +72,7 @@
   
 
     </section>
-    <section class="subscription" id="subscription">
+    <section class="subscription section" id="subscription">
       <div class="subscription__content">
         <div class="price-plan-card DamDasti">
           <h3 class="price-plan-title">DamDasti</h3>
@@ -131,6 +131,7 @@
       </div>
     </section>
   </main>
+  </div>
   <script>
     const products = document.querySelectorAll('.product');
     const productGrid = document.getElementById('productGrid');
@@ -143,7 +144,7 @@
       1: {
         title: "Viet Bang",
         img: "media/HawasProduct.webp",
-        description: "Single origin Arabica. Medium roast with hints of dark chocolate and pepper."
+        description: "Single origin Arabica. Medium roast with hints of dark chocolate and pepper. "
       },
       2: {
         title: "Kenya Bold",
@@ -192,6 +193,11 @@
       goBack.style.display = 'none';
     });
   </script>
+<script type="text/javascript">
+	var myFullpage = new fullpage('#fullpage', {
+		sectionsColor: ['#f2f2f2', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff']
+	});
+</script>
 </body>
 
 </html>
