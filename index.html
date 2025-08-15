@@ -1,203 +1,243 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link rel="stylesheet" href="cssreset.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="fullpage.css" />
+    <script type="text/javascript" src="fullpage.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Hawas Coffee - Premium coffee subscription service offering high-quality, organic coffee beans delivered to your door."
+    />
+    <meta
+      name="keywords"
+      content="coffee, subscription, organic, premium, delivery"
+    />
+    <meta charset="UTF-8" />
+    <title>Hawas</title>
+  </head>
 
-<head>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-  <link rel="stylesheet" href="cssreset.css">
-  <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="fullpage.css">
-  <script type="text/javascript" src="fullpage.js"></script>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Hawas Coffee - Premium coffee subscription service offering high-quality, organic coffee beans delivered to your door.">
-  <meta name="keywords" content="coffee, subscription, organic, premium, delivery">
-  <meta charset="UTF-8" />
-  <title>Hawas</title>
-</head>
+  <body>
+      <header>
+        <nav class="nav">
+          <ul class="nav__leftnav">
+            <li class="nav__item"><a href="#home">Home</a></li>
+            <li class="nav__item"><a href="#products">Products</a></li>
+          </ul>
+          <div class="nav__logo">
+            <a href="index.html"><img src="media/Logo.png"></a>
+          </div>
+          <ul class="nav__rightnav">
+            <li class="nav__item"><a href="#plans">Plans</a></li>
+            <li class="nav__item"><a href="#aboutus">About Us</a></li>
+          </ul>
+        </nav>
+      </header>
+      <main>
+        <div id="fullpage">
+        <section class="hero section">
+          <div class="hero__content">
+            <div class="hero__text">
+              <h1>Hawas Coffee</h1>
+              <h2>
+                Experience the taste of origin — <br/>fresh, premium coffee
+                delivered to your door.
+              </h2>
+              <button class="hero__button">
+                <a class="button__link" href="#subscription"
+                  >Taste the origin</a
+                >
+              </button>
+            </div>
+            <div class="hero__image">
+              <img
+                class="animate__animated animate__fadeInDown"
+                src="media/HawasProduct.webp"
+                alt="Hawas Viet Bang Coffee Packaged"
+              />
+            </div>
+          </div>
+        </section>
+        <section class="products__section section" id="products">
+          <div class="products" id="productGrid">
+            <div class="product" data-id="1">
+              <img src="media/HawasProduct.webp" alt="Product 1" />
+            </div>
+            <div class="product" data-id="2">
+              <img src="media/HawasProduct.webp" alt="Product 2" />
+            </div>
+            <div class="product" data-id="3">
+              <img src="media/HawasProduct.webp" alt="Product 3" />
+            </div>
+            <div class="product" data-id="4">
+              <img src="media/HawasProduct.webp" alt="Product 4" />
+            </div>
+          </div>
 
-<body>
-  <div id="fullpage">
-  <header>
-    <nav class="nav">
-      <ul class="nav__leftnav">
-        <li class="nav__item"><a href="#home">Home</a></li>
-        <li class="nav__item"><a href="#products">Products</a></li>
-      </ul>
-      <div class="nav__logo"><a href="index.html"><img src="media/Logo.png" /></a></div>
-      <ul class="nav__rightnav">
-        <li class="nav__item"><a href="#plans">Plans</a></li>
-        <li class="nav__item"><a href="#aboutus">About Us</a></li>
-      </ul>
-    </nav>
-  </header>
-  <main>
-    <section class="hero section">
-      <div class="hero__content">
-        <div class="hero__text">
-          <h1>Hawas Coffee</h1>
-          <h2>Experience the taste of origin —
-            <br/>fresh, premium coffee delivered to your door.</h2>
-          <button class="hero__button"><a class="button__link" href="#subscription">Taste the origin</a></button>
-        </div>
-        <div class="hero__image">
-          <img class="animate__animated animate__fadeInDown" src="media/HawasProduct.webp"
-            alt="Hawas Viet Bang Coffee Packaged" />
-        </div>
-      </div>
-    </section>
-    <section class="products__section section" id="products">
-      <div class="products" id="productGrid">
-    <div class="product" data-id="1">
-      <img src="media/HawasProduct.webp" alt="Product 1">
+          <!-- Selected product and its description side-by-side -->
+          <div class="active-container hidden" id="activeContainer">
+            <div id="goBack">
+              <div id="activeProduct" class="active-product"></div>
+            </div>
+            <div id="activeDescription" class="description"></div>
+          </div>
+        </section>
+        <section class="subscription section" id="subscription">
+          <div class="subscription__content">
+            <div class="price-plan-card DamDasti">
+              <h3 class="price-plan-title">DamDasti</h3>
+              <p class="price-plan-description">
+                For casual daily use, still premium.
+              </p>
+              <p class="price-plan-price">
+                500.000 Toman<br /><span
+                  style="font-size: 1.5rem; font-weight: 500"
+                  >/month</span
+                >
+              </p>
+              <button class="price-plan-button">Get a pack</button>
+              <p class="price-plan-features">
+                300G High Quality Robusta Coffee Beans<br />
+                Light/Medium Roast<br />
+                Delievered every 30 days<br />
+                100% Organic<br />
+                Pesticide Free<br />
+                Free Shipping<br />
+              </p>
+            </div>
+            <div class="price-plan-card">
+              <h3 class="price-plan-title">NimCafé</h3>
+              <p class="price-plan-description">For two — or a small crew.</p>
+              <p class="price-plan-price">
+                3.000.000 Toman<br /><span
+                  style="font-size: 1.5rem; font-weight: 500"
+                  >/month</span
+                >
+              </p>
+              <button class="price-plan-button">Get a pack</button>
+              <p class="price-plan-features">
+                2KG of High Quality Single Origin Arabica Coffee<br />
+                Light/Medium Roast<br />
+                Delievered every 14 days<br />
+                100% Organic<br />
+                Pesticide Free<br />
+                Free Shipping<br />
+              </p>
+            </div>
+            <div class="price-plan-card">
+              <h3 class="price-plan-title">Serv</h3>
+              <p class="price-plan-description">
+                Professional-grade. Always ready.
+              </p>
+              <p class="price-plan-price">
+                20.000.000 Toman<br /><span
+                  style="font-size: 1.5rem; font-weight: 500"
+                  >/month</span
+                >
+              </p>
+              <button class="price-plan-button">Get a pack</button>
+              <p class="price-plan-features">
+                5kg of the highest quality coffee beans<br />
+                Weekly delivery<br />
+
+                Premium rotating selection<br />
+                Business delivery schedule<br />
+                100% Organic<br />
+                Pesticide Free<br />
+                Free Shipping<br />
+                Discounted for 3 months<br />
+              </p>
+            </div>
+          </div>
+        </section>
+      </main>
     </div>
-    <div class="product" data-id="2">
-      <img src="media/HawasProduct.webp" alt="Product 2">
-    </div>
-    <div class="product" data-id="3">
-      <img src="media/HawasProduct.webp" alt="Product 3">
-    </div>
-    <div class="product" data-id="4">
-      <img src="media/HawasProduct.webp" alt="Product 4">
-    </div>
-  </div>
+    <script>
+      const products = document.querySelectorAll(".product");
+      const productGrid = document.getElementById("productGrid");
+      const activeContainer = document.getElementById("activeContainer");
+      const activeProduct = document.getElementById("activeProduct");
+      const activeDescription = document.getElementById("activeDescription");
+      const goBack = document.getElementById("goBack");
 
-  <!-- Selected product and its description side-by-side -->
-  <div class="active-container hidden" id="activeContainer">
-    <div id="goBack"><div id="activeProduct" class="active-product"></div></div>
-    <div id="activeDescription" class="description"></div>
-  </div>
+      const productData = {
+        1: {
+          title: "Viet Bang",
+          img: "media/HawasProduct.webp",
+          description:
+            "Single origin Arabica. Medium roast with hints of dark chocolate and pepper. ",
+        },
+        2: {
+          title: "Kenya Bold",
+          img: "media/HawasProduct.webp",
+          description:
+            "Strong and full-bodied. Notes of berry and citrus. Perfect for espresso lovers.",
+        },
+        3: {
+          title: "Colombia Light",
+          img: "media/HawasProduct.webp",
+          description:
+            "Smooth and mellow. Light roast with caramel and nutty aromas.",
+        },
+        4: {
+          title: "Colombia Tight",
+          img: "media/HawasProduct.webp",
+          description:
+            "Smooth and mellow. Light roast with caramel and nutty aromas.",
+        },
+      };
 
-  
+      products.forEach((product) => {
+        product.addEventListener("click", () => {
+          const id = product.getAttribute("data-id");
+          const data = productData[id];
 
-    </section>
-    <section class="subscription section" id="subscription">
-      <div class="subscription__content">
-        <div class="price-plan-card DamDasti">
-          <h3 class="price-plan-title">DamDasti</h3>
-          <p class="price-plan-description">For casual daily use, still premium.</p>
-          <p class="price-plan-price">500.000 Toman<br><span style="font-size: 1.5rem; font-weight: 500;">/month</span>
-          </p>
-          <button class="price-plan-button">Get a pack</button>
-          <p class="price-plan-features">
-            300G High Quality Robusta Coffee Beans<br>
-            Light/Medium Roast<br>
-            Delievered every 30 days<br>
-            100% Organic<br>
-            Pesticide Free<br>
-            Free Shipping<br>
+          // Hide the grid
+          productGrid.classList.add("hidden");
 
-          </p>
-        </div>
-        <div class="price-plan-card">
-          <h3 class="price-plan-title">NimCafé</h3>
-          <p class="price-plan-description">For two — or a small crew.</p>
-          <p class="price-plan-price">3.000.000 Toman<br><span
-              style="font-size: 1.5rem; font-weight: 500;">/month</span></p>
-          <button class="price-plan-button">Get a pack</button>
-          <p class="price-plan-features">
-            2KG of High Quality Single Origin Arabica Coffee<br>
-            Light/Medium Roast<br>
-            Delievered every 14 days<br>
-            100% Organic<br>
-            Pesticide Free<br>
-            Free Shipping<br>
-
-
-          </p>
-        </div>
-        <div class="price-plan-card">
-          <h3 class="price-plan-title">Serv</h3>
-          <p class="price-plan-description">Professional-grade. Always ready.</p>
-          <p class="price-plan-price">20.000.000 Toman<br><span
-              style="font-size: 1.5rem; font-weight: 500;">/month</span></p>
-          <button class="price-plan-button">Get a pack</button>
-          <p class="price-plan-features">
-            5kg of the highest quality coffee beans<br>
-            Weekly delivery<br>
-
-
-            Premium rotating selection<br>
-            Business delivery schedule<br>
-            100% Organic<br>
-            Pesticide Free<br>
-            Free Shipping<br>
-            Discounted for 3 months<br>
-
-
-          </p>
-        </div>
-      </div>
-    </section>
-  </main>
-  </div>
-  <script>
-    const products = document.querySelectorAll('.product');
-    const productGrid = document.getElementById('productGrid');
-    const activeContainer = document.getElementById('activeContainer');
-    const activeProduct = document.getElementById('activeProduct');
-    const activeDescription = document.getElementById('activeDescription');
-    const goBack = document.getElementById('goBack');
-
-    const productData = {
-      1: {
-        title: "Viet Bang",
-        img: "media/HawasProduct.webp",
-        description: "Single origin Arabica. Medium roast with hints of dark chocolate and pepper. "
-      },
-      2: {
-        title: "Kenya Bold",
-        img: "media/HawasProduct.webp",
-        description: "Strong and full-bodied. Notes of berry and citrus. Perfect for espresso lovers."
-      },
-      3: {
-        title: "Colombia Light",
-        img: "media/HawasProduct.webp",
-        description: "Smooth and mellow. Light roast with caramel and nutty aromas."
-      },
-      4: {
-        title: "Colombia Tight",
-        img: "media/HawasProduct.webp",
-        description: "Smooth and mellow. Light roast with caramel and nutty aromas."
-      }
-    };
-
-    products.forEach(product => {
-      product.addEventListener('click', () => {
-        const id = product.getAttribute('data-id');
-        const data = productData[id];
-
-        // Hide the grid
-        productGrid.classList.add('hidden');
-
-        // Populate and show the active product + description
-        activeProduct.innerHTML = `
+          // Populate and show the active product + description
+          activeProduct.innerHTML = `
           <img src="${data.img}" alt="${data.title}">
           <h3>${data.title}</h3>
         `;
 
-        activeDescription.innerHTML = `
+          activeDescription.innerHTML = `
           <h3>${data.title}</h3>
           <p>${data.description}</p>
         `;
 
-        activeContainer.classList.remove('hidden');
-        goBack.style.display = 'block';
+          activeContainer.classList.remove("hidden");
+          goBack.style.display = "block";
+        });
       });
-    });
 
-    goBack.addEventListener('click', () => {
-      activeContainer.classList.add('hidden');
-      productGrid.classList.remove('hidden');
-      goBack.style.display = 'none';
-    });
-  </script>
-<script type="text/javascript">
-	var myFullpage = new fullpage('#fullpage', {
-		sectionsColor: ['#f2f2f2', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff']
-	});
-</script>
-</body>
-
+      goBack.addEventListener("click", () => {
+        activeContainer.classList.add("hidden");
+        productGrid.classList.remove("hidden");
+        goBack.style.display = "none";
+      });
+    </script>
+    <script type="text/javascript">
+      var myFullpage = new fullpage("#fullpage", {
+        sectionsColor: [
+          "#f2f2f2",
+          "#4BBFC3",
+          "#7BAABE",
+          "whitesmoke",
+          "#ccddff",
+        ],
+      });
+    </script>
+  </body>
 </html>

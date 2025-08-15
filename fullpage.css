@@ -302,19 +302,16 @@ Not supports in Firefox and IE */
 }
 .fp-warning,
 .fp-watermark{
-    z-index: 9999999;
+    z-index: -999;
     position: absolute;
     bottom: 0;
 }
 .fp-warning,
 .fp-watermark a{
     text-decoration: none;
-    color: #000;
-    background: rgba(255,255,255,0.6);
     padding: 5px 8px;
-    font-size: 14px;
+    font-size: 10px;
     font-family: arial;
-    color: black;
     display: inline-block;
     border-radius: 3px;
     margin: 12px;
