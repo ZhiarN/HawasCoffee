@@ -41,13 +41,11 @@ a img:hover {
 .nav {
     z-index: 999;
     position: absolute;
-    top: 0;
-    left: 0;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    width: 100%;
     padding: 1rem 1rem;
+    width: 100vw;
 
 }
 
@@ -80,7 +78,6 @@ a img:hover {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position:center;
-    min-width: 100vh;
 }
 
 .hero__content {
@@ -100,6 +97,7 @@ a img:hover {
     text-shadow: var(--accent-color) 5px 4px 6px;
     flex-direction: column;
     gap: 3rem;
+    margin: 0 1rem 0 1rem;
 
 }
 .hero__text h2 {
@@ -108,11 +106,11 @@ a img:hover {
     color: var(--secondary-color);
 }
 
-.hero__image img {
+.hero__image {
     margin-top: 4rem;
     object-fit: cover;
-    width: 350px;
-
+    max-width: 350px;
+    margin: 0 1rem 0 1rem;
 }
 
 .hero__button {
@@ -150,7 +148,6 @@ button:hover {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center top;
-    width: 100vw;
     padding: 0 1rem 0 1rem;
 }
 
@@ -159,7 +156,6 @@ button:hover {
       flex-direction: row;
         justify-content: space-evenly;
         align-items: center;
-        width: 100%;
         height: 100vh;
     }
 
@@ -185,7 +181,7 @@ button:hover {
     .active-container {
       padding: 1rem;  
       text-align: center;
-      height: 100%;
+      height: 100vh;
       display: flex;
       gap: 2rem;
       align-items: center;
@@ -194,14 +190,14 @@ button:hover {
     }
 
     .active-product {
-      width: 350px;
+      max-width: 450px;
     }
 
     .description {
         display: flex;
         flex-direction: column;
         width: 400px;
-        height: 100%;
+        height: 80%;
         border-radius: 1rem;
       color: var(--text-color);  
         opacity: .9;
