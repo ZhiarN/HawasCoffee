@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <script src="script.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -14,13 +15,13 @@
     <link rel="stylesheet" href="cssreset.css" />
     <link rel="stylesheet" href="styles.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
+    <me
       name="description"
       content="Hawas Coffee - Premium coffee subscription service offering high-quality, organic coffee beans delivered to your door."
     />
     <meta
       name="keywords"
-      content="coffee, subscription, organic, premium, delivery"
+      content="coffee, hawas, subscription, organic, premium, fresh coffee, delivery, roastery"
     />
     <meta charset="UTF-8" />
     <title>Hawas</title>
@@ -29,14 +30,13 @@
   <body>
     <header>
       <nav class="nav">
-        <ul class="nav__leftnav">
+        <ul class="nav__navbar">
           <li class="nav__item"><a href="#home">Home</a></li>
           <li class="nav__item"><a href="#products">Products</a></li>
-        </ul>
-        <div class="nav__logo">
+        <li class="nav__item" id="title">Hawas</li>
+        <!-- <div class="nav__logo">
           <a href="index.html"><img src="media/Logo.png" /></a>
-        </div>
-        <ul class="nav__rightnav">
+        </div> -->
           <li class="nav__item"><a href="#plans">Plans</a></li>
           <li class="nav__item"><a href="#aboutus">About Us</a></li>
         </ul>
@@ -47,10 +47,7 @@
         <div class="hero__content">
           <div class="hero__text">
             <h1>Hawas Coffee</h1>
-            <h2>
-              Experience the taste of origin —<br />Fresh, premium coffee
-              delivered to your door.
-            </h2>
+            <h2>Tasty fresh, premium quality coffee delivered to you.</h2>
             <button class="hero__button">
               <a class="button__link" href="#subscription">Taste the origin</a>
             </button>
@@ -65,6 +62,7 @@
         </div>
       </section>
       <section class="products__section section" id="products">
+        <p class="sectionTopText">Our Selection</p>
         <div class="products" id="productGrid">
           <div class="product" data-id="1">
             <img src="media/HawasProduct.webp" alt="Viet Bang" />
@@ -89,6 +87,7 @@
         </div>
       </section>
       <section class="subscription section" id="subscription">
+        <p class="sectionTopText">Plans</p>
         <div class="subscription__content">
           <div class="price-plan-card DamDasti">
             <h3 class="price-plan-title">DamDasti</h3>
@@ -157,6 +156,7 @@
         </div>
       </section>
       <section class="aboutus section">
+        <p class="sectionTopText">About Us</p>
         <div class="aboutus__content">
           <p>
             At Hawas, we believe great coffee begins at the source.<br />
@@ -175,71 +175,7 @@
         </div>
       </section>
     </main>
-    <script>
-      const products = document.querySelectorAll(".product");
-      const productGrid = document.getElementById("productGrid");
-      const activeContainer = document.getElementById("activeContainer");
-      const activeProduct = document.getElementById("activeProduct");
-      const activeDescription = document.getElementById("activeDescription");
-      const goBack = document.getElementById("goBack");
-
-      const productData = {
-        1: {
-          title: "Viet Bang",
-          img: "media/HawasProduct.webp",
-          description:
-            "Single origin Arabica. Medium roast with hints of dark chocolate and pepper. ",
-        },
-        2: {
-          title: "Kenya Bold",
-          img: "media/HawasProduct.webp",
-          description:
-            "Strong and full-bodied. Notes of berry and citrus. Perfect for espresso lovers.",
-        },
-        3: {
-          title: "Colombia Light",
-          img: "media/HawasProduct.webp",
-          description:
-            "Smooth and mellow. Light roast with caramel and nutty aromas.",
-        },
-        4: {
-          title: "Colombia Tight",
-          img: "media/HawasProduct.webp",
-          description:
-            "Smooth and mellow. Light roast with caramel and nutty aromas.",
-        },
-      };
-
-      products.forEach((product) => {
-        product.addEventListener("click", () => {
-          const id = product.getAttribute("data-id");
-          const data = productData[id];
-
-          // Hide the grid
-          productGrid.classList.add("hidden");
-
-          // Populate and show the active product + description
-          activeProduct.innerHTML = `
-          <img src="${data.img}" alt="${data.title}">
-          <h3>${data.title}</h3>
-        `;
-
-          activeDescription.innerHTML = `
-          <h3>${data.title}</h3>
-          <p>${data.description}</p>
-        `;
-
-          activeContainer.classList.remove("hidden");
-          goBack.style.display = "block";
-        });
-      });
-
-      goBack.addEventListener("click", () => {
-        activeContainer.classList.add("hidden");
-        productGrid.classList.remove("hidden");
-        goBack.style.display = "none";
-      });
-    </script>
+    <script></script>
     <script type="text/javascript">
       var myFullpage = new fullpage("#fullpage", {
         sectionsColor: [
