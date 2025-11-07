@@ -71,7 +71,7 @@ a img:hover {
   text-align: center;
 }
 
-section {
+.section {
   height: 100vh;
 }
 
@@ -90,8 +90,9 @@ section {
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  min-height: 100vh;
+  height: 100%;
   min-width: 100%;
+  padding: 1rem;
   background: linear-gradient(
     0deg,
     var(--accent-color) 0%,
@@ -106,38 +107,32 @@ section {
   text-shadow: var(--accent-color) 5px 4px 6px;
   flex-direction: column;
   gap: 3rem;
-  margin: 0 1rem 0 1rem;
   max-width: 45%;
 }
 .hero__text h2 {
-  font-size: 2.5rem;
+  font-size: 3.5rem;
   font-weight: 700;
   color: var(--secondary-color);
 }
 
 .hero__image {
-  margin-top: 4rem;
   object-fit: cover;
   max-width: 350px;
-  margin: 0 1rem 0 1rem;
 }
 
 .hero__button {
   display: inline-block;
-  padding: 1rem 2rem;
+  padding: 1.6rem 1rem;
   background-color: var(--primary-color);
-  color: var(--text-color);
-  font-size: 1.2rem;
-  font-weight: 600;
-  letter-spacing: 0.3em;
-  text-transform: uppercase;
-  text-decoration: none;
-  border-radius: 0.8rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 0.8rem;
+  border-radius: 20px;
   transition: all 0.3s ease;
+  outline: none;
 }
 
 .hero__button a {
-  font-size: 1.2rem;
   color: var(--text-color);
   text-decoration: none;
   text-shadow: var(--accent-color) 4px 4px 6px;
