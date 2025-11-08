@@ -43,19 +43,20 @@ a img:hover {
   display: flex;
   justify-content: center;
   position: absolute;
-  padding: 1rem 1rem;
+  padding: 0.5rem 1rem;
   width: 100%;
 }
 
-/* .nav__logo img {
+.nav__logo img {
   object-fit: cover;
-  max-width: 300px;
-} */
+  max-width: 200px;
+}
 
 .nav__navbar {
   display: flex;
   padding: 0;
   width: 100%;
+  align-items: center;
   justify-content: space-around;
 }
 
@@ -99,7 +100,6 @@ a img:hover {
     rgba(0, 0, 0, 0) 12%
   );
 }
-
 .hero__text {
   font-size: 3rem;
   color: var(--secondary-color);
@@ -107,7 +107,7 @@ a img:hover {
   text-shadow: var(--accent-color) 5px 4px 6px;
   flex-direction: column;
   gap: 3rem;
-  max-width: 45%;
+  max-width: 60%;
 }
 .hero__text h2 {
   font-size: 3.5rem;
@@ -307,7 +307,14 @@ h3 {
 }
 
 /* Responsive Design */
-
+@media screen and (max-width: 930px) {
+  .hero__image {
+    max-width: 250px;
+  }
+  .hero__text {
+    font-size: 2rem;
+  }
+}
 @media screen and (max-width: 768px) {
   .hero__content {
     display: flex;
