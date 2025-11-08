@@ -345,7 +345,7 @@ h3 {
   }
   .products {
     display: flex;
-    flex-flow: column wrap;
+    flex-direction: column;
   }
   .product {
     width: 300px;
@@ -375,9 +375,12 @@ h3 {
     padding: 0;
   }
 
-  .nav {
+  .nav__item {
     flex-direction: column;
-
+    display: none;
     padding: 0.5rem;
+  }
+  .nav__logo {
+    display: flex;
   }
 }
