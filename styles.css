@@ -31,8 +31,8 @@ a:visited {
 }
 
 a:hover {
-  font-size: 2rem;
-  transition: font-size 0.3s;
+  transform: scale(1.03);
+  transition: transform 0.24s ease;
   cursor: pointer;
 }
 
@@ -60,6 +60,7 @@ a img:hover {
   width: 100%;
   align-items: center;
   justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 .nav__item {
@@ -94,7 +95,7 @@ a img:hover {
   justify-content: space-around;
   align-items: center;
   height: 100%;
-  min-width: 100%;
+  width: 100%;
   padding: 1rem;
   background: linear-gradient(
     0deg,
@@ -163,7 +164,7 @@ button:hover {
 }
 
 .product {
-  width: 300px;
+  width: clamp(200px, 350px, 350px);
   cursor: pointer;
   text-align: center;
   transition: transform 0.3s ease-out;
@@ -174,7 +175,9 @@ button:hover {
 }
 
 .product img {
-  width: 350px;
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
 .hidden {
@@ -192,7 +195,7 @@ button:hover {
 }
 
 .active-product {
-  max-width: 450px;
+  width: clamp(100px, 400px, 450px);
 }
 
 .description {
