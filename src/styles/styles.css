@@ -82,7 +82,7 @@ a img:hover {
 /* Hero Section */
 
 .hero {
-  background-image: url(media/VietnamFarms.webp);
+  background-image: url(../../media/VietnamFarms.webp);
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -133,15 +133,12 @@ a img:hover {
   border-radius: 20px;
   transition: all 0.3s ease;
   outline: none;
-}
-
-.hero__button a {
   color: var(--text-color);
   text-decoration: none;
   text-shadow: var(--accent-color) 4px 4px 6px;
 }
 
-button:hover {
+.hero__button:hover {
   background-color: var(--accent-color);
   transform: translateY(-4px);
   cursor: pointer;
@@ -168,6 +165,10 @@ button:hover {
   cursor: pointer;
   text-align: center;
   transition: transform 0.3s ease-out;
+  border: 0;
+  background: none;
+  padding: 0;
+  margin: 0;
 }
 
 .product:hover {
@@ -178,24 +179,6 @@ button:hover {
   max-width: 100%;
   height: auto;
   display: block;
-}
-
-.hidden {
-  display: none !important;
-}
-
-.active-container {
-  padding: 1rem;
-  text-align: center;
-  height: 100vh;
-  display: flex;
-  gap: 2rem;
-  align-items: center;
-  justify-content: center;
-}
-
-.active-product {
-  width: clamp(100px, 400px, 450px);
 }
 
 .description {
@@ -212,25 +195,16 @@ button:hover {
   flex: 1;
 }
 
-#goBack {
-  display: none;
-}
-#goBack:hover {
-  cursor: pointer;
-  transform: scale(1.05);
-  transition: transform 0.4s ease;
-}
-
 /* Subscribtion Plan Section */
 
-.subscription {
+.plans {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
   /* padding-top: 5rem; */
 }
 
-.subscription__content {
+.plans__content {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -244,7 +218,7 @@ button:hover {
   flex-direction: column;
   align-items: center;
   width: 26%;
-  height: 80vh;
+  min-height: 700px;
   padding: 2rem;
   background: linear-gradient(0deg, var(--accent-color), var(--primary-color));
   border-radius: 2rem;

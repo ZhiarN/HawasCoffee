@@ -1,0 +1,19 @@
+{
+  "name": "Coffee",
+  "version": "1.0.0",
+  "description": "A landing page for HAWAS Coffee roastery",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "keywords": [],
+  "author": "Zhiar",
+  "license": "ISC",
+  "packageManager": "pnpm@10.33.2",
+  "dependencies": {
+    "vite": "^8.0.13"
+  }
+}
