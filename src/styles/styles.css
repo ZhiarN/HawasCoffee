@@ -1,102 +1,75 @@
 :root {
   --primary-color: #1d1d1d;
-  /* Dark Gray */
   --secondary-color: #000000;
-  /* Black */
+  --accent-color-low-opactiy: #2b1b08ad;
+  --accent-color-lower-opactiy: #2b1b0880;
   --accent-color: #2b1b08;
-  /* Coffee*/
   --text-color: #f8f5f2;
-  /* Ivory */
   --primary-font: Roboto;
-  /* Primary font */
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 2rem;
+  --space-xl: 4rem;
+  --default-radius: 10px;
+  --font-size-sm: clamp(0.8rem, 0.8rem + 0.25vw, 0.95rem);
+  --font-size-base: clamp(1rem, 0.9rem + 0.5vw, 1.125rem);
+  --font-size-lg: clamp(1.1rem, 1rem + 0.6vw, 1.5rem);
+  --font-size-xl: clamp(1.3rem, 1.2rem + 1vw, 2rem);
+  --font-size-xxl: clamp(1.8rem, 1.5rem + 2vw, 2.5rem);
 }
 
 html {
   font-family: var(--primary-font);
-  font-size: 16px;
-  padding: 0;
-  margin: 0;
   scroll-behavior: smooth;
 }
-
+html::-webkit-scrollbar {
+  display: none;
+  scrollbar-width: none;
+}
 body {
-  background-color: white;
+  background-image: url(../../media/VietnamFarms.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
 }
-/* Navigation Bar */
-
-a,
-a:visited {
-  color: black;
-  text-decoration: none;
+.root {
+  display: flex;
+  flex-direction: column;
+  position: relative;
 }
-
-a:hover {
-  transform: scale(1.03);
-  transition: transform 0.24s ease;
-  cursor: pointer;
+header {
+  position: sticky;
+  top: 0;
+  margin-bottom: var(--space-md);
 }
-
-a img:hover {
-  transform: scale(1.1);
-  transition: transform 0.4s;
+section {
+  padding: var(--space-md);
+  min-height: 100svh;
+  min-width: 100svw;
+}
+.main {
+  display: flex;
+  flex-direction: column;
 }
 .nav {
   display: flex;
   justify-content: center;
-  position: absolute;
-  padding: 0.5rem 1rem;
-  width: 100%;
-}
-
-.nav__logo img {
-  object-fit: cover;
-  max-width: clamp(100px, 16vw, 200px);
-  height: auto;
-}
-
-.nav__navbar {
-  display: flex;
-  padding: 0;
-  width: 100%;
-  align-items: center;
-  justify-content: space-around;
-  flex-wrap: wrap;
-}
-
-.nav__item {
-  color: var(--secondary-color);
-  font-size: clamp(1.6rem, 1.6vw, 2rem);
-  font-weight: 700;
-  list-style: none;
+  padding: var(--space-sm);
 }
 
 .sectionTopText {
-  font-size: clamp(1.6rem, 2vw, 3rem);
+  color: white;
+  font-size: var(--font-size-xxl);
   text-align: center;
 }
-
-.section {
-  height: 100svh;
-}
-
-/* Hero Section */
-
-.hero {
-  background-image: url(../../media/VietnamFarms.webp);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center;
-}
-
-.hero__content {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-  height: 100%;
-  width: 100%;
-  padding: 1rem;
+.hero__section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  justify-items: center;
+  max-width: 100%;
+  align-content: flex-start;
+  gap: var(--space-xl);
   background: linear-gradient(
     0deg,
     var(--accent-color) 0%,
@@ -104,67 +77,72 @@ a img:hover {
   );
 }
 .hero__text {
-  font-size: clamp(2rem, 1vw, 3rem);
-  color: var(--secondary-color);
   display: flex;
-  text-shadow: var(--accent-color) 5px 4px 6px;
   flex-direction: column;
-  gap: 3rem;
-  max-width: 60%;
-}
-.hero__text h2 {
-  font-size: 3.5rem;
-  font-weight: 700;
+  font-size: var(--font-size-xl);
   color: var(--secondary-color);
-}
-
-.hero__image {
-  object-fit: cover;
-  max-width: 350px;
+  text-align: center;
+  text-shadow: var(--accent-color) 3px 3px 6px;
+  height: fit-content;
 }
 
 .hero__button {
-  display: inline-block;
+  display: block;
   padding: 1.6rem 1rem;
   background-color: var(--primary-color);
-  font-size: 1.5rem;
+  font-size: var(--font-size-xl);
   font-weight: bold;
-  letter-spacing: 0.8rem;
-  border-radius: 20px;
-  transition: all 0.3s ease;
-  outline: none;
+  letter-spacing: 0.3rem;
+  border-radius: var(--default-radius);
+  transition:
+    background-color 0.4s ease,
+    transform 0.4s ease;
   color: var(--text-color);
-  text-decoration: none;
   text-shadow: var(--accent-color) 4px 4px 6px;
 }
 
 .hero__button:hover {
   background-color: var(--accent-color);
-  transform: translateY(-4px);
+  transform: translateY(-3px);
   cursor: pointer;
 }
-/* Products Section */
-.products__section {
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center top;
-  padding: 0 1rem 0 1rem;
-}
-
 .products {
   display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
+  flex-direction: column;
   align-items: center;
-  height: 100vh;
+  background-image: url(../../media/Bag.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.products__content {
+  display: flex;
+  width: 100%;
+  gap: var(--space-xl);
+  overflow-y: hidden;
+  overflow-x: auto;
+  scrollbar-width: none;
+  margin: auto 0;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  border-radius: var(--default-radius);
+  padding: var(--space-md);
+  border: 2px black solid;
+  background-color: var(--accent-color-low-opactiy);
+  /* -webkit-overflow-scrolling: touch; */
+}
+.products__content::-webkit-scrollbar {
+  display: none;
 }
 
 .product {
-  width: clamp(200px, 350px, 350px);
+  flex: 0 0 auto;
   cursor: pointer;
   text-align: center;
+  scroll-snap-align: center;
   transition: transform 0.3s ease-out;
+  user-select: none;
   border: 0;
   background: none;
   padding: 0;
@@ -172,57 +150,54 @@ a img:hover {
 }
 
 .product:hover {
-  transform: scale(1.05);
+  transform: scale(1.03);
 }
-
-.product img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
-.description {
-  display: flex;
-  flex-direction: column;
-  width: 400px;
-  height: 80%;
-  border-radius: 1rem;
-  color: var(--text-color);
-  opacity: 0.9;
-  background: linear-gradient(0deg, var(--primary-color), var(--accent-color));
-  font-size: 1.5rem;
-  padding: 1rem;
-  flex: 1;
-}
-
-/* Subscribtion Plan Section */
 
 .plans {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: url(../../media/Storage.webp);
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: top;
-  /* padding-top: 5rem; */
+  background-position: center;
 }
 
 .plans__content {
   display: flex;
-  flex-direction: row;
-  align-items: center;
+  gap: var(--space-sm);
   justify-content: space-evenly;
+  scroll-snap-type: x mandatory;
+  border-radius: var(--default-radius);
+  margin: auto 0;
   width: 100%;
-  height: 100vh;
+  height: auto;
+  padding: var(--space-sm);
+  overflow-x: scroll;
+  overflow-y: hidden;
+  background-color: var(--accent-color-lower-opactiy);
+  border: 2px black solid;
+}
+.plans__content::-webkit-scrollbar {
+  display: none;
+  scrollbar-width: none;
 }
 
 .price-plan-card {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 26%;
-  min-height: 700px;
-  padding: 2rem;
-  background: linear-gradient(0deg, var(--accent-color), var(--primary-color));
-  border-radius: 2rem;
-  opacity: 0.98;
+  scroll-snap-align: start;
+  flex: 0 0 330px;
+  padding: var(--space-lg);
+  background: linear-gradient(
+    0deg,
+    var(--accent-color-low-opactiy),
+    var(--primary-color)
+  );
+  border-radius: var(--default-radius);
+
+  border: 1px solid black;
 }
 
 h3 {
@@ -230,59 +205,66 @@ h3 {
 }
 
 .price-plan-title {
-  font-size: clamp(1.5rem, 2vw, 3rem);
+  font-size: var(--font-size-xl);
   color: var(--text-color);
-  margin-bottom: 1rem;
+  margin-bottom: var(--space-sm);
 }
 
 .price-plan-price {
-  line-height: 3rem;
-  font-size: clamp(1.3rem, 2vw, 3rem);
+  line-height: var(--space-xl);
+  font-size: var(--font-size-xxl);
   color: var(--text-color);
   font-weight: bold;
   text-align: center;
 }
 
 .price-plan-button {
-  padding: 0.8rem;
-  margin: 1rem;
-  font-size: clamp(1rem, 1.6vw, 1.5rem);
+  padding: var(--space-md);
+  margin: var(--space-md);
+  font-size: var(--font-size-xl);
+  font-weight: bold;
   color: var(--text-color);
   background: linear-gradient(
     180deg,
     var(--accent-color),
     var(--primary-color)
   );
-  border-radius: 1rem;
+  border-radius: var(--default-radius);
   cursor: pointer;
   width: 100%;
 }
 
 .price-plan-description {
-  font-size: clamp(0rem, 1.1vw, 1.5rem);
+  font-size: var(--font-size-sm);
   color: var(--text-color);
   margin-bottom: 2rem;
 }
 
 .price-plan-features {
   line-height: clamp(1.6rem, 1.6vw, 2.6rem);
-  font-size: clamp(1rem, 1.1vw, 1.5rem);
+  font-size: var(--font-size-base);
   color: var(--text-color);
   align-self: flex-start;
 }
 
 .aboutus {
+  display: flex;
+  flex-direction: column;
+  background: url(../../media/RawCoffee.webp);
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: top;
+  background-position: center;
 }
 
 .aboutus__content {
   display: flex;
-  text-align: center;
-  width: 100vw;
-  height: 100vh;
+  font-size: var(--font-size-base);
+  height: max-content;
+  line-height: 1.6em;
+  margin: auto 0;
   padding: 2rem;
+  color: white;
+  border: 2px solid black;
+  background-color: var(--accent-color-low-opactiy);
+  border-radius: var(--default-radius);
 }
-
-/* Responsive Design */
