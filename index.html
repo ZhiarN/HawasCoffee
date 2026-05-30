@@ -10,7 +10,10 @@
       name="keywords"
       content="coffee, hawas, subscription, organic, premium, fresh coffee, delivery, roastery"
     />
+
     <meta charset="UTF-8" />
+    <link rel="preload" as="image" href="/media/VietnamFarms.webp" />
+    <link rel="preload" as="image" href="/media/VietBang.webp" />
     <title>Hawas</title>
   </head>
 
@@ -20,7 +23,7 @@
         <nav class="nav">
           <a class="nav__logo" href="index.html">
             <img
-              src="media/logo.webp"
+              src="/media/logo.webp"
               width="130"
               height="85"
               alt="Hawas logo"
@@ -40,7 +43,7 @@
             class="hero-image"
             width="230"
             height="397"
-            src="media/HawasBag.webp"
+            src="/media/VietBang.webp"
             alt="Hawas Viet Bang Coffee Packaged"
             data-role="hero-image-hook"
             fetchpriority="high"
@@ -57,7 +60,7 @@
             >
               <img
                 loading="lazy"
-                src="media/HawasProduct.webp"
+                src="/media/VietBang.webp"
                 alt="Viet Bang"
                 width="300"
                 height="487"
@@ -71,7 +74,7 @@
             >
               <img
                 loading="lazy"
-                src="media/HawasProduct.webp"
+                src="/media/GodsAwakening.webp"
                 alt="Mekong Roast"
                 width="300"
                 height="487"
@@ -85,7 +88,7 @@
             >
               <img
                 loading="lazy"
-                src="media/HawasProduct.webp"
+                src="/media/DevilsBreath.webp"
                 alt="Dragon's Brew"
                 width="300"
                 height="487"
@@ -99,7 +102,7 @@
             >
               <img
                 loading="lazy"
-                src="media/HawasProduct.webp"
+                src="/media/MeuAmor.webp"
                 alt="Lucky Sucky"
                 width="300"
                 height="487"
@@ -196,6 +199,44 @@
         </section>
       </main>
     </div>
+    <template id="product-modal-template">
+      <dialog
+        class="dialog"
+        data-component="product-dialog"
+        aria-modal="true"
+        data-action="close-modal"
+      >
+        <div class="modal modal--paper">
+          <header class="modal__header">
+            <button
+              type="button"
+              class="modal__close"
+              aria-label="Close modal"
+              data-action="close-modal"
+            >
+              &hookrightarrow;
+            </button>
+            <h2 class="modal__title" data-fill="title"></h2>
+          </header>
+          <main class="modal__content">
+            <img class="modal__image" alt="" data-fill="image" />
+            <div class="modal__info">
+              <hr />
+
+              <p class="description" data-fill="description"></p>
+              <hr />
+              <p class="origin" data-fill="origin"></p>
+              <p class="notes" data-fill="notes"></p>
+              <p class="body" data-fill="body"></p>
+              <p class="caffeine" data-fill="caffeine"></p>
+              <p class="roast" data-fill="roast"></p>
+              <p class="acidity" data-fill="acidity"></p>
+            </div>
+          </main>
+        </div>
+      </dialog>
+    </template>
+    <div id="modal-root"></div>
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>
