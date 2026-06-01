@@ -4,33 +4,19 @@
     margin-top: -10vh;
     align-items: center;
     justify-content: space-around;
-    padding: 0 1rem 0 1rem;
-  }
-  .price-plan-card {
-    min-width: 400px;
   }
   .hero__text {
-    text-align: left;
-    text-wrap-mode: nowrap;
-  }
-
-  .price-plan-button {
-    max-width: 20rem;
+    white-space: nowrap;
   }
 
   .price-plan-card {
-    margin: 0.8rem;
-    max-width: 100svw;
+    margin: 1rem;
+    min-width: 400px;
   }
   .modal__content {
     grid-template-columns: 1fr;
     grid-template-rows: auto 1fr;
     align-items: start;
-  }
-
-  .modal__image {
-    max-width: 100%;
-    max-height: 240px;
   }
 }
 @media screen and (min-width: 1450px) {
