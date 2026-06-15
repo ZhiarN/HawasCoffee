@@ -64,14 +64,14 @@ section {
   padding: var(--space-md);
   min-height: 100svh;
   width: 100%;
-  .sectionTopText {
+  .section-title {
     color: white;
     font-size: var(--font-size-xxl);
     text-align: center;
   }
 }
 
-.root {
+#root {
   display: flex;
   flex-direction: column;
   position: relative;
@@ -86,7 +86,7 @@ section {
   padding: var(--space-sm);
 }
 
-.hero__section {
+.hero {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   justify-items: center;
@@ -136,7 +136,7 @@ section {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  .products__content {
+  .products__grid {
     display: flex;
     width: 100%;
     gap: var(--space-xl);
@@ -149,7 +149,7 @@ section {
     padding: var(--space-md);
     border: 2px black solid;
     background-color: var(--accent-color-low-opacity);
-    .product {
+    .products__item {
       flex: 0 0 auto;
       cursor: pointer;
       scroll-snap-align: center;
@@ -191,7 +191,7 @@ section {
     overflow-y: hidden;
     background-color: var(--accent-color-lower-opacity);
     border: 2px black solid;
-    .price-plan-card {
+    .plan-card {
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -205,13 +205,13 @@ section {
       );
       border-radius: var(--default-radius);
       border: 1px solid black;
-      .price-plan-title {
+      .plan-card__title {
         font-size: var(--font-size-xl);
         color: var(--text-color);
         margin-bottom: var(--space-sm);
       }
 
-      .price-plan-price {
+      .plan-card__price {
         line-height: var(--space-xl);
         font-size: var(--font-size-xxl);
         color: var(--text-color);
@@ -223,7 +223,7 @@ section {
         }
       }
 
-      .price-plan-button {
+      .plan-card__button {
         padding: var(--space-md);
         margin: var(--space-md);
         font-size: var(--font-size-xl);
@@ -240,13 +240,13 @@ section {
         width: 100%;
       }
 
-      .price-plan-description {
+      .plan-card__description {
         font-size: var(--font-size-sm);
         color: var(--text-color);
         margin-bottom: 2rem;
       }
 
-      .price-plan-features {
+      .plan-card__features {
         line-height: clamp(1.6rem, 1.6vw, 2.6rem);
         font-size: var(--font-size-base);
         color: var(--text-color);
@@ -256,18 +256,14 @@ section {
   }
 }
 
-h3 {
-  color: var(--text-color);
-}
-
-.aboutus {
+.about {
   display: flex;
   flex-direction: column;
   background: url(/media/RawCoffee.webp);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  .aboutus__content {
+  .about__content {
     display: flex;
     font-size: var(--font-size-base);
     height: max-content;

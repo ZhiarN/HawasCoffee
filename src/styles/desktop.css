@@ -1,5 +1,5 @@
 @media screen and (min-width: 694px) {
-  .hero__section {
+  .hero {
     display: flex;
     margin-top: -10vh;
     align-items: center;
@@ -9,7 +9,7 @@
     white-space: nowrap;
   }
 
-  .price-plan-card {
+  .plan-card {
     margin: 1rem;
     min-width: 400px;
   }
@@ -20,7 +20,7 @@
   }
 }
 @media screen and (min-width: 1450px) {
-  .products__content {
+  .products__grid {
     justify-content: center;
   }
 }

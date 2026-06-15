@@ -18,7 +18,7 @@
   </head>
 
   <body>
-    <div class="root">
+    <div id="root">
       <header>
         <nav class="nav">
           <a class="nav__logo" href="index.html">
@@ -32,7 +32,7 @@
         </nav>
       </header>
       <main class="main">
-        <section class="hero__section">
+        <section class="hero">
           <div class="hero__text">
             <h1>Top of The Coffee Pyramid</h1>
             <button type="button" class="hero__button" data-action="cta">
@@ -40,7 +40,7 @@
             </button>
           </div>
           <img
-            class="hero-image"
+            class="hero__image"
             width="230"
             height="397"
             src="/media/VietBang.webp"
@@ -50,60 +50,64 @@
           />
         </section>
         <section class="products" id="products">
-          <h2 class="sectionTopText">Our Selection</h2>
-          <div class="products__content" id="productGrid">
+          <h2 class="section-title">Our Selection</h2>
+          <div class="products__grid" id="productGrid">
             <button
-              type="button"
-              class="product"
-              data-id="1"
-              data-action="open-product-info"
+            type="button"
+            class="products__item"
+            data-id="1"
+            data-action="open-product-info"
+            aria-label="View product information for Viet Bang"
             >
               <img
                 loading="lazy"
                 src="/media/VietBang.webp"
-                alt="Viet Bang"
+                alt="Viet Bang Product Image"
                 width="300"
                 height="487"
               />
             </button>
             <button
               type="button"
-              class="product"
+              class="products__item"
               data-id="2"
               data-action="open-product-info"
+              aria-label="View product information for Gods Awakening"
             >
               <img
                 loading="lazy"
                 src="/media/GodsAwakening.webp"
-                alt="Mekong Roast"
+                alt="Gods Awakening Product Image"
                 width="300"
                 height="487"
               />
             </button>
             <button
               type="button"
-              class="product"
+              class="products__item"
               data-id="3"
               data-action="open-product-info"
+              aria-label="View product information for Devil's Breath"
             >
               <img
                 loading="lazy"
                 src="/media/DevilsBreath.webp"
-                alt="Dragon's Brew"
+                alt="Devil's Breath Product Image"
                 width="300"
                 height="487"
               />
             </button>
             <button
               type="button"
-              class="product"
+              class="products__item"
               data-id="4"
               data-action="open-product-info"
+              aria-label="View product information for Meu Amor"
             >
               <img
                 loading="lazy"
                 src="/media/MeuAmor.webp"
-                alt="Lucky Sucky"
+                alt="Meu Amor Product Image"
                 width="300"
                 height="487"
               />
@@ -111,18 +115,18 @@
           </div>
         </section>
         <section class="plans" id="plans">
-          <h2 class="sectionTopText">Plans</h2>
+          <h2 class="section-title">Plans</h2>
           <div class="plans__content">
-            <div class="price-plan-card DamDasti">
-              <h3 class="price-plan-title">DamDasti</h3>
-              <p class="price-plan-description">
+            <div class="plan-card">
+              <h3 class="plan-card__title">DamDasti</h3>
+              <p class="plan-card__description">
                 For casual daily use, still premium.
               </p>
-              <p class="price-plan-price">
+              <p class="plan-card__price">
                 500.000<br />Toman<br /><span class="small">/month</span>
               </p>
-              <button class="price-plan-button">Get a pack</button>
-              <p class="price-plan-features">
+              <button class="plan-card__button">Get a pack</button>
+              <p class="plan-card__features">
                 300G High Quality Robusta Coffee Beans<br />
                 Light/Medium Roast<br />
                 Delivered every 30 days<br />
@@ -131,14 +135,14 @@
                 Free Shipping<br />
               </p>
             </div>
-            <div class="price-plan-card">
-              <h3 class="price-plan-title">NimCafé</h3>
-              <p class="price-plan-description">For two — or a small crew.</p>
-              <p class="price-plan-price">
+            <div class="plan-card">
+              <h3 class="plan-card__title">NimCafé</h3>
+              <p class="plan-card__description">For two — or a small crew.</p>
+              <p class="plan-card__price">
                 3.000.000<br />Toman<br /><span class="small">/month</span>
               </p>
-              <button class="price-plan-button">Get a pack</button>
-              <p class="price-plan-features">
+              <button class="plan-card__button">Get a pack</button>
+              <p class="plan-card__features">
                 2KG of High Quality Single Origin Arabica Coffee<br />
                 Light/Medium Roast<br />
                 Delivered every 14 days<br />
@@ -147,16 +151,16 @@
                 Free Shipping<br />
               </p>
             </div>
-            <div class="price-plan-card">
-              <h3 class="price-plan-title">Serv</h3>
-              <p class="price-plan-description">
+            <div class="plan-card">
+              <h3 class="plan-card__title">Serv</h3>
+              <p class="plan-card__description">
                 Professional-grade. Always ready.
               </p>
-              <p class="price-plan-price">
+              <p class="plan-card__price">
                 10.000.000<br />Toman<br /><span class="small">/month</span>
               </p>
-              <button class="price-plan-button">Get a pack</button>
-              <p class="price-plan-features">
+              <button class="plan-card__button">Get a pack</button>
+              <p class="plan-card__features">
                 5kg of the highest quality coffee beans<br />
                 Weekly delivery<br />
                 Premium rotating selection<br />
@@ -169,9 +173,9 @@
             </div>
           </div>
         </section>
-        <section class="aboutus">
-          <h2 class="sectionTopText">About Us</h2>
-          <p class="aboutus__content">
+        <section class="about">
+          <h2 class="section-title">About Us</h2>
+          <p class="about__content">
             At Hawas, we believe great coffee begins at the source.<br />
             That’s why we work directly with some of the finest farms in
             Vietnam, where generations of growers dedicate themselves to
