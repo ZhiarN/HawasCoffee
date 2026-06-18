@@ -85,6 +85,15 @@ section {
   justify-content: center;
   padding: var(--space-sm);
 }
+.logo {
+  width: 140px;
+  height: auto;
+}
+.logo path {
+  color: rgb(0, 0, 0);
+  opacity: 1;
+}
+
 
 .hero {
   display: grid;
