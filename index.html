@@ -39,22 +39,26 @@ role="img"
       </header>
       <main class="main">
         <section class="hero">
-          <div class="hero__text">
-            <h1>Top of The Coffee Pyramid</h1>
-            <button type="button" class="hero__button" data-action="cta">
-              TASTE THE FEELING
-            </button>
-          </div>
-          <img
-            class="hero__image"
-            width="230"
-            height="397"
-            src="/media/VietBang.webp"
-            alt="Hawas Viet Bang Coffee Packaged"
-            data-role="hero-image-hook"
-            fetchpriority="high"
-          />
-        </section>
+  <div class="hero__container">
+    <div class="hero__text">
+      <h1>Top of The <br><span class="hero__highlight">Coffee Pyramid</span></h1>
+      <p class="hero__subtext">Sourced from the finest farms. Roasted to perfection. Delivered to your door.</p>
+      <button type="button" class="hero__button" data-action="cta">
+        Pick your taste →
+      </button>
+    </div>
+    <div class="hero__image-wrapper">
+      <img
+        class="hero__image"
+        src="/media/VietBang.webp"
+        alt="Hawas Viet Bang Coffee Packaged"
+        data-role="hero-image-hook"
+        fetchpriority="high"
+      />
+    </div>
+  </div>
+</section>
+
         <section class="products" id="products">
           <h2 class="section-title">Our Selection</h2>
           <div class="products__grid" id="productGrid">

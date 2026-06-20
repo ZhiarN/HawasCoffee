@@ -1,16 +1,42 @@
-@media screen and (min-width: 694px) {
+@media screen and (min-width: 794px) {
+	.hero__text h1 {
+		font-size: clamp(2.8rem, 7vw, 5rem);
+	}
+	.hero__container {
+		grid-template-columns: 1fr 1fr;
+		padding: 1rem;
+		text-align: left;
+		max-width: 1280px;
+	}
 	.hero {
 		display: flex;
-		margin-top: -10vh;
+
+		min-height: calc(100svh - 120px);
+
 		align-items: center;
-		justify-content: space-around;
+		justify-content: center;
+	}
+	.hero__button {
+		padding: 1.4rem 4.4rem;
+		font-size: var(--font-size-xl);
+		width: fit-content;
+		letter-spacing: 1.1;
+	}
+	.hero__image {
+		order: 2;
+		max-height: 500px;
+	}
+
+	.hero__subtext {
+		font-size: var(--font-size-xl);
 	}
 	.hero__text {
+		order: 1;
 		white-space: nowrap;
 	}
 
 	.plan-card {
-		margin: 1rem;
+		margin: var(--space-md);
 		min-width: 400px;
 	}
 	.modal__content {
