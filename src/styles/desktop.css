@@ -1,26 +1,26 @@
 @media screen and (min-width: 694px) {
-  .hero {
-    display: flex;
-    margin-top: -10vh;
-    align-items: center;
-    justify-content: space-around;
-  }
-  .hero__text {
-    white-space: nowrap;
-  }
+	.hero {
+		display: flex;
+		margin-top: -10vh;
+		align-items: center;
+		justify-content: space-around;
+	}
+	.hero__text {
+		white-space: nowrap;
+	}
 
-  .plan-card {
-    margin: 1rem;
-    min-width: 400px;
-  }
-  .modal__content {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto 1fr;
-    align-items: start;
-  }
+	.plan-card {
+		margin: 1rem;
+		min-width: 400px;
+	}
+	.modal__content {
+		grid-template-columns: 1fr;
+		grid-template-rows: auto 1fr;
+		align-items: start;
+	}
 }
 @media screen and (min-width: 1450px) {
-  .products__grid {
-    justify-content: center;
-  }
+	.products__grid {
+		justify-content: center;
+	}
 }
