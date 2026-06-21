@@ -53,7 +53,7 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  background-attachment: fixed;
+  background-attachment:fixed;
 }
 header {
   position: sticky;
@@ -62,12 +62,15 @@ header {
 }
 section {
   padding: var(--space-md);
-  min-height: 100svh;
+  max-width: 1480px;
+  margin: auto;
   width: 100%;
+  gap: var(--space-md);
   .section-title {
-    color: white;
+    color: var(--text-color);
     font-size: var(--font-size-xxl);
     text-align: center;
+    margin: var(--space-md);
   }
 }
 
@@ -79,7 +82,7 @@ section {
     180deg,
     rgba(43, 27, 8, 0.95) 0%,
     rgba(43, 27, 8, 0.7) 40%,
-    rgba(0, 0, 0, 0.3) 100%
+    rgba(43, 27, 8, 0.3) 100%
   );
 }
 
@@ -91,13 +94,19 @@ section {
   display: flex;
   justify-content: center;
   padding: var(--space-sm);
+   background: linear-gradient(
+    180deg,
+    rgba(43, 27, 8, 0.95) 0%,
+    rgba(43, 27, 8, 0.7) 40%,
+    rgba(0, 0, 0, 0.4) 100%
+  );
 }
 .logo {
-  width: 140px;
+  width: 100px;
   height: auto;
 }
 .logo path {
-  color: rgb(0, 0, 0);
+  color: rgb(255, 222, 182);
   opacity: 1;
 }
 
@@ -106,9 +115,9 @@ section {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	min-height: calc(100svh - 120px);
 	padding: 2rem 1rem 3rem;
 	position: relative;
+  	min-height: calc(100svh - 80px);
 }
 .hero__container {
 	display: grid;
@@ -125,7 +134,7 @@ section {
 	display: flex;
 	flex-direction: column;
 	gap: 2rem;
-	color: #fff;
+	color: var(--text-color);
 	text-align: center;
 	align-items: center;
 }
@@ -133,7 +142,7 @@ section {
 	font-size: 2.2rem;
 	font-weight: 700;
 	line-height: 1.1;
-	color: #fff;
+	color: var(--text-color);
 	margin: 0;
 	text-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
 }
@@ -157,8 +166,8 @@ section {
 	align-items: center;
 	gap: 0.75rem;
 	padding: 1rem 1.5rem;
-	background: linear-gradient(135deg, #c4956a, #a67c52);
-	color: #fff;
+	background: linear-gradient(135deg, #bd844f, #a67c52);
+	color: var(--text-color);
 	font-weight: 700;
 	font-size: var(--font-size-base);
 	letter-spacing: 0.2rem;
@@ -212,21 +221,17 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-image: url(/media/Bag.webp);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
   .products__grid {
     display: flex;
     width: 100%;
-    gap: var(--space-xl);
+    gap: var(--space-lg);
     overflow-y: hidden;
     overflow-x: auto;
     margin: auto 0;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
     border-radius: var(--default-radius);
-    padding: var(--space-md);
+    padding: var(--space-lg);
     border: 2px black solid;
     background-color: var(--accent-color-low-opacity);
     .products__item {
@@ -239,6 +244,10 @@ section {
       background: none;
       padding: 0;
       margin: 0;
+      & img {
+        aspect-ratio: auto;
+        object-fit: contain;
+      }
       &:hover {
         transform: scale(1.03);
       }
@@ -253,20 +262,16 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: url(/media/Storage.webp);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
   .plans__content {
     display: flex;
     gap: var(--space-sm);
     justify-content: space-evenly;
-    scroll-snap-type: x mandatory;
+    /* scroll-snap-type: x mandatory; */
     border-radius: var(--default-radius);
     margin: auto 0;
     width: 100%;
     height: auto;
-    padding: var(--space-sm);
+    padding: var(--space-md);
     overflow-x: auto;
     overflow-y: hidden;
     background-color: var(--accent-color-lower-opacity);
@@ -310,14 +315,18 @@ section {
         font-weight: bold;
         border: none;
         color: var(--text-color);
-        background: linear-gradient(
-          180deg,
-          var(--accent-color),
-          var(--primary-color)
-        );
+	background: linear-gradient(135deg, #bd844f, #a67c52);
         border-radius: var(--default-radius);
         cursor: pointer;
         width: 100%;
+	transition: all 0.3s ease;
+        	&:hover {
+		transform: translateY(-3px) scale(1.02);
+		box-shadow: 0 12px 40px rgba(196, 149, 106, 0.5);
+	}
+	&:active {
+		transform: translateY(0) scale(0.98);
+	}
       }
 
       .plan-card__description {
@@ -336,21 +345,50 @@ section {
   }
 }
 
+
+.equipments {
+    display: grid;
+  grid-template-columns: 1fr;
+  width: 100%;
+.equipment__wrapper {
+  display: grid;
+  padding: var(--space-md);
+  gap: var(--space-lg);
+.text-base {
+  color: var(--text-color);
+  line-height: 1.4;
+  font-size: var(--font-size-base);
+  text-shadow: 1px 10px 10px black;
+  text-align: center;
+}
+}
+.equipment-image-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .equipment-image {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  max-height: 280px;
+  box-shadow: #000000;
+}
+}
+}
 .about {
   display: flex;
   flex-direction: column;
-  background: url(/media/RawCoffee.webp);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
   .about__content {
     display: flex;
     font-size: var(--font-size-base);
+    align-items: center;
+    justify-content: center;
+    min-height: 480px;
     height: max-content;
-    line-height: 1.6em;
+    line-height: 1.8em;
     margin: auto 0;
-    padding: 2rem;
-    color: white;
+    padding: var(--space-lg);
+    color: var(--text-color);
     border: 2px solid black;
     background-color: var(--accent-color-low-opacity);
     border-radius: var(--default-radius);
@@ -362,7 +400,7 @@ section {
   padding: 0;
   border: none;
   border-radius: var(--default-radius);
-  width: min(90vw, 1480px);
+  width: min(90vw, 1280px);
   height: auto;
   background: transparent;
   &::backdrop {
@@ -388,8 +426,8 @@ section {
     margin: 0;
   }
   hr {
-    border: none;
-    border-top: 4px solid var(--accent-color);
+    height: 4px;
+    background-color: var(--accent-color);
   }
   .modal__title {
     font-family: serif;
