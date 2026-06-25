@@ -6,6 +6,8 @@
   --accent-color-lower-opacity: #2b1b0880;
   --milky-coffee-color: oklch(68.558% 0.04313 58.43);
   --text-color: #f8f5f2;
+  --link-color: rgb(255, 222, 182);
+  --button-gradient: linear-gradient(135deg, #bd844f, #a67c52);
   --primary-font: Serif;
   --space-sm: 0.5rem;
   --space-md: 1rem;
@@ -73,6 +75,14 @@ section {
     margin: var(--space-md);
   }
 }
+a {
+  color: var(--link-color);
+  text-decoration: none;
+}
+a:visited {
+  text-decoration: none;
+  color: var(--link-color);
+}
 
 #root {
   display: flex;
@@ -82,7 +92,7 @@ section {
     180deg,
     rgba(43, 27, 8, 0.95) 0%,
     rgba(43, 27, 8, 0.7) 40%,
-    rgba(43, 27, 8, 0.3) 100%
+    rgba(43, 27, 8, 0.4) 100%
   );
 }
 
@@ -90,23 +100,23 @@ section {
   display: flex;
   flex-direction: column;
 }
+
 .nav {
   display: flex;
   justify-content: center;
   padding: var(--space-sm);
-   background: linear-gradient(
-    180deg,
-    rgba(43, 27, 8, 0.95) 0%,
-    rgba(43, 27, 8, 0.7) 40%,
-    rgba(0, 0, 0, 0.4) 100%
-  );
+   background: var(--accent-color-low-opacity);
+  .nav__bar {
+    display: none;
+  }
 }
 .logo {
   width: 100px;
   height: auto;
 }
+
 .logo path {
-  color: rgb(255, 222, 182);
+  color: var(--link-color);
   opacity: 1;
 }
 
@@ -133,13 +143,13 @@ section {
 	order: 2;
 	display: flex;
 	flex-direction: column;
-	gap: 2rem;
+	gap: var(--space-lg);
 	color: var(--text-color);
 	text-align: center;
 	align-items: center;
 }
 .hero__text h1 {
-	font-size: 2.2rem;
+	font-size: var(--font-size-xxl);
 	font-weight: 700;
 	line-height: 1.1;
 	color: var(--text-color);
@@ -147,7 +157,7 @@ section {
 	text-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
 }
 .hero__highlight {
-	background: linear-gradient(135deg, #f5e6d3 0%, #d3a271 50%, #7a4f39 100%);
+	background: linear-gradient(135deg, #f5e6d3 0%, #d3a271 60%, #7a4f39 100%);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 	background-clip: text;
@@ -164,13 +174,12 @@ section {
 .hero__button {
 	display: inline-flex;
 	align-items: center;
-	gap: 0.75rem;
-	padding: 1rem 1.5rem;
-	background: linear-gradient(135deg, #bd844f, #a67c52);
+	padding: 1.2rem 1.5rem;
+	background: var(--button-gradient);
 	color: var(--text-color);
 	font-weight: 700;
-	font-size: var(--font-size-base);
-	letter-spacing: 0.2rem;
+	font-size: var(--font-size-xl);
+	letter-spacing: 0.1rem;
 	border: none;
 	border-radius: 20px;
 	transition: all 0.3s ease;
@@ -315,7 +324,7 @@ section {
         font-weight: bold;
         border: none;
         color: var(--text-color);
-	background: linear-gradient(135deg, #bd844f, #a67c52);
+	background: var(--button-gradient);
         border-radius: var(--default-radius);
         cursor: pointer;
         width: 100%;

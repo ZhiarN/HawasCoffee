@@ -1,5 +1,37 @@
 @media screen and (min-width: 794px) {
+.nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	.nav__bar {
+		display: flex;
+		align-items: center;
+		justify-content: space-evenly;
+		width: 70%;
+		padding: 0;
+		height: fit-content;
 
+	}
+	.nav__link {
+		list-style-type: none;
+		font-size: var(--font-size-xl);
+		font-weight: bold;
+		transition: all 0.3s ease;
+
+		&:visited {
+			text-decoration: none;
+		}
+		&:hover {
+			transform: scale(1.1);
+		}
+		&:active {
+			scale: 0.9;
+		}
+	}
+}
+	.logo {
+		margin-left: 4rem;
+	}
 	.hero {
 		display: flex;
 		min-height: calc(100svh - 80px);
