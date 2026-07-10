@@ -8,7 +8,10 @@
   --text-color: #f8f5f2;
   --link-color: rgb(255, 222, 182);
   --button-gradient: linear-gradient(135deg, #bd844f, #a67c52);
-  --primary-font: Serif;
+  --primary-font: "LatoWeb";
+  --bold-font: "LatoWebBold";
+  --hero-font: "LatoWebBlack";
+
   --space-sm: 0.5rem;
   --space-md: 1rem;
   --space-lg: 2rem;
@@ -69,6 +72,7 @@ section {
   width: 100%;
   gap: var(--space-md);
   .section-title {
+    font-family: var(--bold-font);
     color: var(--text-color);
     font-size: var(--font-size-xxl);
     text-align: center;
@@ -149,6 +153,7 @@ a:visited {
 	align-items: center;
 }
 .hero__text h1 {
+  font-family: var(--hero-font);
 	font-size: var(--font-size-xxl);
 	font-weight: 700;
 	line-height: 1.1;
@@ -157,6 +162,7 @@ a:visited {
 	text-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
 }
 .hero__highlight {
+  font-family: var(--hero-font);
 	background: linear-gradient(135deg, #f5e6d3 0%, #d3a271 60%, #7a4f39 100%);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
@@ -172,12 +178,13 @@ a:visited {
 }
 
 .hero__button {
+  font-family: var(--bold-font);
 	display: inline-flex;
 	align-items: center;
 	padding: 1.2rem 1.5rem;
 	background: var(--button-gradient);
 	color: var(--text-color);
-	font-weight: 700;
+	font-weight: 900;
 	font-size: var(--font-size-xl);
 	letter-spacing: 0.1rem;
 	border: none;
@@ -439,7 +446,6 @@ a:visited {
     background-color: var(--accent-color);
   }
   .modal__title {
-    font-family: serif;
     font-size: var(--font-size-xxl);
     text-align: center;
   }
