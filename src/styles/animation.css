@@ -1,0 +1,16 @@
+[data-animation="slide-in-right"] {
+  transform: translateX(50%);
+  opacity: 0;
+  transition: 1s ease;
+}
+
+[data-animation="slide-in-left"] {
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: 1s ease;
+
+}
+.animate {
+  transform: translateX(0);
+  opacity: 1;
+}
