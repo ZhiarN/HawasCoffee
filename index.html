@@ -6,15 +6,11 @@
       name="description"
       content="Hawas Coffee - Premium coffee subscription service offering high-quality, organic coffee beans delivered to your door."
     />
-    <meta
-      name="keywords"
-      content="coffee, hawas, subscription, organic, premium, fresh coffee, delivery, roastery"
-    />
 
     <meta charset="UTF-8" />
     <link rel="preload" as="image" href="/media/VietnamFarms.webp" />
     <link rel="preload" as="image" href="/media/VietBang.webp" />
-    <title>Hawas</title>
+    <title>Premium Coffee Subscription | Hawas Coffee</title>
   </head>
 
   <body>
@@ -54,12 +50,12 @@
         <section class="hero">
   <div class="hero__container">
     <div class="hero__text">
-      <h1>Top of The <br><span class="hero__highlight">Coffee Pyramid</span></h1>
+      <h1>Top of the <br><span class="hero__highlight">Coffee Pyramid</span></h1>
       <p class="hero__subtext">Sourced from the finest farms. Roasted to perfection. Delivered to your door.</p>
-      <a  href="#products">
-      <button type="button" class="hero__button">
-        Find your taste →
-      </button>
+      <p class="hero__subtext">Trusted by more than 400 cafés worldwide.</p>
+      
+      <a  href="#products" class="hero__button">
+        Discover The Selection →
     </a>
     </div>
     <div class="hero__image-wrapper">
@@ -73,97 +69,168 @@
     </div>
   </div>
 </section>
-<section class="equipments" id="whyus" >
-<h2 class="section-title">How we sort</h2>
+<section class="products" id="products">
+  <div class="divider" aria-hidden="true"></div>
+  <h2 class="section-title">Our Selection</h2>
+          <div class="products__grid" id="productGrid">
+            <button
+            class="products__item"
+            data-id="1"
+            data-action="open-product-info"
+            type="button"
+            aria-label="open Viet Bang details"
+            >
+              <img
+                loading="lazy"
+                src="/media/VietBang.webp"
+                alt="Viet Bang"
+                width="300"
+                height="487"
+              />
+              <h3 class="products__name">Viet Bang</h3>
+              <p class="products__type">Single Origin Arabica
+              </p>
+
+              <ul class="products__attributes">
+                <li>Chocolate · Pepper</li>
+                <li>Rich Mouthfeel</li>
+                <li>Medium Roast</li>
+              </ul>
+
+          </button>
+            <button
+              class="products__item"
+              data-id="2"
+              data-action="open-product-info"
+                          type="button"
+            aria-label="open God's Awakening details"
+            >
+              <img
+                loading="lazy"
+                src="/media/GodsAwakening.webp"
+                alt="Gods Awakening"
+                width="300"
+                height="487"
+              />
+              <h3 class="products__name">God's Awakening</h3>
+
+              <p class="products__type">Specialty Arabica Blend</p>
+            <ul class="products__attributes">
+              <li>Berry · Citrus · Tangerine</li>
+              <li>Sweet Citrus</li>
+              <li>Light Roast</li>
+            </ul>
+            </button>
+            <button
+              class="products__item"
+              data-id="3"
+              data-action="open-product-info"
+                          type="button"
+            aria-label="open Devil's Breath details"
+            >
+              <img
+                loading="lazy"
+                src="/media/DevilsBreath.webp"
+                alt="Devil's Breath"
+                width="300"
+                height="487"
+              />
+              <h3 class="products__name">Devil's Breath</h3>
+
+              <p class="products__type">Single Origin Robusta</p>
+              <ul class="products__attributes">
+                <li>Caramel · Nuts</li>
+                <li>Clean Aftertaste</li>
+                <li>Dark Roast</li>
+              </ul>
+            </button>
+            <button
+              class="products__item"
+              data-id="4"
+              data-action="open-product-info"
+                          type="button"
+            aria-label="open Meu Amor details"
+            >
+              <img
+                loading="lazy"
+                src="/media/MeuAmor.webp"
+                alt="Meu Amor"
+                width="300"
+                height="487"
+              />
+              <h3 class="products__name text-base">Meu Amor</h3>
+
+              <p class="products__type">Single Origin Robusta</p>
+              <ul class="products__attributes">
+                <li>Caramel · Nuts · Chocolate</li>
+                <li>Velvety Body</li>
+                <li>Medium Roast</li>
+              </ul>
+            </button>
+          </div>
+        </section>
+        <div class="divider" aria-hidden="true"></div>
+        <section class="whyus" id="whyus">
+            <h2 class="section-title">Why Hawas</h2>
+  <p class="text-base">Great coffee begins at the tree.<br />
+            That’s why we work directly with some of the world's most renowned coffee-growing regions.
+            Every batch is roasted in small quantities to preserve its aroma, flavor, and freshness.<br />
+            <br />
+            As a small, passionate company, we take pride in every step of the
+            journey—from farm to roast to your cup. With us, coffee isn’t just a
+            product. It’s a craft, a connection, and a daily ritual worth
+            savoring.</p>
+            <div class="promises">
+              <div class="promise">NO <br> DEFECTS</div>
+              <div class="promise">FRESH</div>
+              <div class="promise">PESTICIDE <br> FREE</div>
+              <div class="promise">AVAILABILITY</div>
+            </div>
+        </section>
+        <div class="divider" aria-hidden="true"></div>
+        
+        <section class="equipments" >
+<h2 class="section-title">Precision Sorting</h2>
 <article class="equipment__wrapper sort">
 <div class="equipment-image-wrapper">
   <img src="/media/sorter.webp" alt="Grotech industrial sorting machine" class="equipment-image" id="sorter" data-animation="slide-in-right" loading="lazy">
 </div>
 <p class="text-base" data-animation="slide-in-left">We use GroTech machines with AI vision technology to analyze every bean for color, size, and defect detection.
-
 High-speed precision sorting removes defective and off-grade beans with exceptional accuracy.
-AI-driven quality control delivers superior batch consistency and purity.
-This proccess ensures a cleaner green coffee and a more consistent roast profile.
+This process ensures a cleaner green coffee and a more consistent roast profile.
 </p>
 </article>
-</section>5
-<section class="equipments" >
-<h2 class="section-title">How we roast</h2>
+        <div class="divider" aria-hidden="true"></div>
+
+<h2 class="section-title">Expert Roasting</h2>
 <article class="equipment__wrapper roast">
   <div class="equipment-image-wrapper">
     <img src="/media/roaster.webp" alt="HAWAS in-house roasting machine" class="equipment-image" id="roaster" data-animation="slide-in-left" loading="lazy">
   </div>
   <p class="text-base" data-animation="slide-in-right">Every bean is roasted on our in-house engineered machines, designed for precision and consistency.
-Combined with expert roasting techniques, this gives us complete control over every roast.
-The result is exceptional flavor, batch after batch after batch.</p>
+Combined with expert roasting techniques and documented temperature curves, this gives us complete control over every roast.
+We never shelf what we roast, resulting in exceptional aroma, batch after batch.</p>
 </article>
 </section>
-        <section class="products" id="products">
-          <h2 class="section-title">Our Selection</h2>
-          <div class="products__grid" id="productGrid">
-            <button
-            type="button"
-            class="products__item"
-            data-id="1"
-            data-action="open-product-info"
-            aria-label="View product information for Viet Bang"
-            >
-              <img
-                loading="lazy"
-                src="/media/VietBang.webp"
-                alt="Viet Bang product"
-                width="300"
-                height="487"
-              />
-            </button>
-            <button
-              type="button"
-              class="products__item"
-              data-id="2"
-              data-action="open-product-info"
-              aria-label="View product information for Gods Awakening"
-            >
-              <img
-                loading="lazy"
-                src="/media/GodsAwakening.webp"
-                alt="Gods Awakening product"
-                width="300"
-                height="487"
-              />
-            </button>
-            <button
-              type="button"
-              class="products__item"
-              data-id="3"
-              data-action="open-product-info"
-              aria-label="View product information for Devil's Breath"
-            >
-              <img
-                loading="lazy"
-                src="/media/DevilsBreath.webp"
-                alt="Devil's Breath product"
-                width="300"
-                height="487"
-              />
-            </button>
-            <button
-              type="button"
-              class="products__item"
-              data-id="4"
-              data-action="open-product-info"
-              aria-label="View product information for Meu Amor"
-            >
-              <img
-                loading="lazy"
-                src="/media/MeuAmor.webp"
-                alt="Meu Amor product"
-                width="300"
-                height="487"
-              />
-            </button>
-          </div>
-        </section>
-        <section class="plans" id="plans">
+
+<section class="delivery">
+        <div class="divider" aria-hidden="true"></div>
+
+  <h2 class="section-title">Fresh Delivery</h2>
+  <h4 class="text-base bold-text">Fresh to Your Door</h4>
+  <p class="text-base">
+    Free drone delivery isn't just faster—it's how we keep your coffee fresher.
+    <br>
+    Every order is dispatched as soon as it's roasted, minimizing time in transit.
+From our roastery to your doorstep, every delivery is designed to preserve the full character and aroma of your coffee, completely free of charge.
+  </p>
+  <div class="svgs-container">
+    <svg class="svg" xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><title>Drone</title><path d="M10 10 7 7"/><path d="m10 14-3 3"/><path d="m14 10 3-3"/><path d="m14 14 3 3"/><path d="M14.205 4.139a4 4 0 1 1 5.439 5.863"/><path d="M19.637 14a4 4 0 1 1-5.432 5.868"/><path d="M4.367 10a4 4 0 1 1 5.438-5.862"/><path d="M9.795 19.862a4 4 0 1 1-5.429-5.873"/><rect x="10" y="8" width="4" height="8" rx="1"/></svg>
+<svg class="svg" xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><title>Calendar</title><path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/><path d="m9 16 2 2 4-4"/></svg>
+</div>
+</section>
+<section class="plans" id="plans">
+          <div class="divider" aria-hidden="true"></div>
           <h2 class="section-title">Plans</h2>
           <div class="plans__content">
             <div class="plan-card">
@@ -222,24 +289,22 @@ The result is exceptional flavor, batch after batch after batch.</p>
             </div>
           </div>
         </section>
+<div class="divider" aria-hidden="true"></div>
         <section class="about">
           <h2 class="section-title">About Us</h2>
-          <p class="about__content">
-            At Hawas, we believe great coffee begins at the source.<br />
-            That’s why we work directly with some of the finest farms in
-            Vietnam, where generations of growers dedicate themselves to
-            cultivating beans of exceptional quality. Every batch of coffee we
-            offer is carefully roasted in small quantities, ensuring ultimate
-            freshness, rich aroma, and a taste that truly stands out. Our goal
-            is simple: to bring you coffee that not only delights your senses
-            but also gives you the energy and focus to carry through your
-            day.<br />
-            <br />
-            As a small, passionate company, we take pride in every step of the
-            journey—from farm to roast to your cup. With us, coffee isn’t just a
-            product. It’s a craft, a connection, and a daily ritual worth
-            savoring.
-          </p>
+          <div class="about__content">
+            <p class="text-base">
+Hawas was founded on a simple belief: exceptional coffee deserves exceptional care at every stage of its journey. From carefully selecting beans grown in renowned coffee regions to roasting in small batches and delivering them at peak freshness, every decision is made with quality in mind.
+Rather than chasing volume, we focus on consistency, craftsmanship, and transparency. 
+
+
+
+            </p>
+            <p class="text-base">
+Every roast reflects our commitment to honoring the work of the farmers who grow our coffee and delivering an experience our customers can look forward to every day.
+For us, coffee is more than a beverage. It's a ritual built on patience, precision, and respect for the people and places behind every bean.
+            </p>
+          </div>
         </section>
       </main>
     </div>
@@ -249,6 +314,7 @@ The result is exceptional flavor, batch after batch after batch.</p>
         data-component="product-dialog"
         aria-modal="true"
         data-action="close-modal"
+        aria-labelledby="modal-title"
       >
         <div class="modal modal--paper">
           <header class="modal__header">
@@ -260,7 +326,7 @@ The result is exceptional flavor, batch after batch after batch.</p>
             >
               &times;
             </button>
-            <h2 aria-label="modal-title" class="modal__title" data-fill="title"></h2>
+            <h2 id="modal-title" class="modal__title" data-fill="title"></h2>
           </header>
           <main class="modal__content">
             <img class="modal__image" alt="" data-fill="image" />
