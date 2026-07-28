@@ -23,7 +23,9 @@
   --font-size-xl: clamp(1.3rem, 1.2rem + 1vw, 2rem);
   --font-size-xxl: clamp(1.8rem, 1.5rem + 2vw, 2.5rem);
 }
-
+@view-transition {
+  navigation: auto;
+}
 * {
   font-family: var(--primary-font);
   scroll-behavior: smooth;
